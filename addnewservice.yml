@@ -1,0 +1,19 @@
+---
+- name: Hi polo
+  hosts: localhost 
+  tasks:
+  - include_vars: ./newservicedetails.yml
+  - name: create new service
+    uri:
+      url: "{{url}}"
+      method: "{{verb}}"
+      body: "access_token={{access_token}}&name={{name}}&deployment_option={{deployment_option}}&backend_version={{backend_version}}&system_name={{system_name}}"
+      validate_certs: false
+      return_content: yes
+      status_code: "{{status_code}}"
+    register: result
+  - name: Find the project id
+    set_fact:
+      example_plan_id: "{{result.json.service.id }}"
+  - debug:
+      msg: "{{result.json.service.id}}"    
