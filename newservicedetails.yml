@@ -1,9 +1,0 @@
----
-status_code: '201'
-url: https://cicd-3scale-admin.3scale1.com.10.19.137.80.nip.io/admin/api/services.json
-verb: POST
-access_token: 049ad3249ea5d23f51c989eb07aa588744fb1434e837ee331961178b8f6d74aa
-name: SERVICE17
-deployment_option: hosted 
-backend_version: 1
-system_name: SERVICE17
