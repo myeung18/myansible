@@ -1,4 +1,4 @@
 # ansible
 ```
-ansible-playbook addnewservice.yml
+ansible-playbook 3scale/addnewservice.yml
 ```
